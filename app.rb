@@ -19,7 +19,7 @@ class App < Sinatra::Base
   end
 
   get '/say/:word1/:word2/:word3/:word4/:word5' do
-    words = params.to_a
+    words = params.values.to_a
     "#{words}"
   end
 
