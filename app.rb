@@ -19,9 +19,8 @@ class App < Sinatra::Base
   end
 
   get '/say/:word1/:word2/:word3/:word4/:word5' do
-    words = params[:word1, :word2, :word3, :word4, :word5].to_s
+    words = params[:word1, :word2, :word3, :word4, :word5].to_a
     "#{words}"
-
   end
 
   get '/:operation/:number1/:number2' do
